@@ -3,13 +3,14 @@ import React from 'react';
 export default {
     header: {
         brand: {
-            title: 'Aplicação com React'
+            title: 'Coconut'
         },
         navmenu: {
             link: {
                 increment: 'Incrementar',
                 reset: 'Resetar',
-                login: 'Entrar'
+                login: 'Entrar',
+                toggleLanguage: 'Mudar idioma'
             }
         }
     },
@@ -27,7 +28,7 @@ export default {
     },
     
     login: {
-        title: 'Login',
+        title: 'Entrar',
         inputs: {
             username: 'Usuário',
             password: 'Senha',

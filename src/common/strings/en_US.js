@@ -3,13 +3,14 @@ import React from 'react';
 export default {
     header: {
         brand: {
-            title: 'React Application'
+            title: 'Coconut'
         },
         navmenu: {
             link: {
                 increment: 'Increment',
                 reset: 'Reset',
-                login: 'Login'
+                login: 'Login',
+                toggleLanguage: 'Change language'
             }
         }
     },
