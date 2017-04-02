@@ -4,4 +4,4 @@ import getIntl from 'intl';
 
 export { pt_BR, en_US };
 
-export default getIntl(navigator.language);
+export default getIntl;

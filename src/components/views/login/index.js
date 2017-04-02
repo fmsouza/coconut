@@ -1,17 +1,17 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import Form from 'common/form';
-import Text from 'common/strings';
 import fields from './fields';
 import './login.css';
 
+@inject('text')
 @observer
 export class Login extends React.Component {
 
     get FormConfig() {
         return {
             title: 'login',
-            fields,
+            fields: fields(this.props.text),
             onSuccess: this.onSuccess.bind(this),
             onError: this.onError.bind(this),
         };
@@ -26,9 +26,10 @@ export class Login extends React.Component {
     }
 
     render() {
+        const { text } = this.props;
         return (
             <div className="login">
-                <h1 className="center">{Text.login.title}</h1>
+                <h1 className="center">{text.get('login.title')}</h1>
                 <Form config={this.FormConfig} />
             </div>
         );
