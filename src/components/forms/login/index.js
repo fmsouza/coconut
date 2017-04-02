@@ -49,7 +49,6 @@ export class LoginForm extends React.Component {
 
     render() {
         const form = formCreator(this.config);
-        // console.log(form.fields.toJSON());
         return (
             <form onSubmit={form.onSubmit}>
                 {this.renderInput(form.$('username'))}
