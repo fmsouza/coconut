@@ -1,0 +1,14 @@
+.login h1 {
+    margin: 30px auto;
+}
+
+.login .center {
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .login {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
