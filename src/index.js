@@ -18,7 +18,13 @@ const Application = () => (
       <Route path="/" component={Views.Layout}>
         <IndexRedirect to="dashboard" />
         
-        <Route path="dashboard" component={Views.Dashboard} onEnter={Action.allowedFor(Roles.ALL)} />
+        <Route path="dashboard" component={Views.Dashboard} onEnter={Action.allowedFor(Roles.ALL)}>
+          <IndexRedirect to="overview" />
+          
+          <Route path="overview" component={Views.Overview} />
+          <Route path="new" component={Views.AddRepository} />
+        </Route>
+
         <Route path="login" component={Views.Login} onEnter={Action.allowedFor()} />
 
         <Route path="400" component={Views.Forbidden} />

@@ -1,5 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
+import { Navbar, Nav, NavItem, Glyphicon } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import './styles.css';
 
 @inject('text')
@@ -7,11 +9,28 @@ import './styles.css';
 export class Dashboard extends React.Component {
 
     render() {
-        const { text } = this.props;
+        const { text, children } = this.props;
         return (
             <div className="dashboard">
-                <h1 className="center">{text.get('views.dashboard.title')}</h1>
+                <Navbar>
+                    <Nav>
+                        <LinkContainer to={{ pathname: '/dashboard/overview' }}>
+                            <NavItem>
+                                <Glyphicon glyph="th" />&nbsp;
+                                {text.get('views.dashboard.overview')}
+                            </NavItem>
+                        </LinkContainer>
+                        <LinkContainer to={{ pathname: '/dashboard/new' }}>
+                            <NavItem>
+                                <Glyphicon glyph="plus" />&nbsp;
+                                {text.get('actions.addRepository')}
+                            </NavItem>
+                        </LinkContainer>
+                    </Nav>
+                </Navbar>
+                <div>{children}</div>
             </div>
         );
     }
 }
+

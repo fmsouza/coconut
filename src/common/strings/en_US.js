@@ -3,7 +3,8 @@ export default {
         submit: 'Submit',
         login: 'Login',
         logoff: 'Logoff',
-        toggleLanguage: 'Change language'
+        toggleLanguage: 'Change language',
+        addRepository: 'Add repository'
     },
 
     forms: {
@@ -14,8 +15,13 @@ export default {
     },
 
     views: {
+        addRepository: {
+            title: 'Add Repository'
+        },
+
         dashboard: {
-            title: 'Dashboard'
+            title: 'Dashboard',
+            overview: 'Overview'
         },
         
         login: {
