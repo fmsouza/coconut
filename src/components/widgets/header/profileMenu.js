@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import { NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
+import { NavDropdown, MenuItem, NavItem, Glyphicon } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import * as Action from 'common/actions';
 
@@ -21,8 +21,15 @@ export class ProfileMenu extends React.Component {
         const { text, user } = this.props;
         return (
             <NavDropdown eventKey={1} title={user.data.name} id="profilemenu-dropdown">
+                <MenuItem eventKey={1.1}>
+                    <Glyphicon glyph="cog" />&nbsp;
+                    {text.get('widgets.profileMenu.settings')}
+                </MenuItem>
                 <MenuItem divider />
-                <MenuItem eventKey={1.1} onClick={Action.logoff}>{text.get('actions.logoff')}</MenuItem>
+                <MenuItem eventKey={1.2} onClick={Action.logoff}>
+                    <Glyphicon glyph="log-out" />&nbsp;
+                    {text.get('actions.logoff')}
+                </MenuItem>
             </NavDropdown>
         );
     }

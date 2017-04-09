@@ -37,6 +37,10 @@ export default {
                 title: 'Coconut'
             }
         },
+
+        profileMenu: {
+            settings: 'Settings'
+        }
     }
     
 };

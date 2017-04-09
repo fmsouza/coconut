@@ -37,5 +37,9 @@ export default {
                 title: 'Coconut'
             }
         },
+
+        profileMenu: {
+            settings: 'Configurções'
+        }
     }
 };
