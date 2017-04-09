@@ -8,7 +8,9 @@ export const login = (username, password) => {
             name: 'Administrator',
             email: 'admin@admin.com',
             username: 'admin',
-            token: 'bf9e2d6bt192e6dg19bdeg69'
+            token: 'bf9e2d6bt192e6dg19bdeg69',
+            role: 'admin'
         });
+        Action.go('/dashboard');
     } else Action.notify({ message: 'User not found.', level: Notifications.ERROR});
 };

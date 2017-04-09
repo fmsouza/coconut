@@ -14,6 +14,10 @@ export default {
             }
         }
     },
+    
+    dashboard: {
+        title: 'Painel'
+    },
 
     home: {
         title: 'Seja bem-vindo ao React',

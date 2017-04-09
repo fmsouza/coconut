@@ -14,6 +14,10 @@ export default {
             }
         }
     },
+    
+    dashboard: {
+        title: 'Dashboard'
+    },
 
     home: {
         title: 'Welcome to React',

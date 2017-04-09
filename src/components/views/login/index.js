@@ -13,13 +13,8 @@ export class Login extends React.Component {
         Action.login(username, password);
     }
 
-    componentWillReceiveProps(newProps) {
-        console.log(newProps);
-    }
-
     render() {
         const { text, user } = this.props;
-        console.log(user.data);
         return (
             <div className="login">
                 <h1 className="center">{text.get('login.title')}</h1>
