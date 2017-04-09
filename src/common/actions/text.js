@@ -1,5 +1,3 @@
 import * as Stores from 'common/stores';
 
-const { text } = Stores;
-
-export const changeLanguage = (language) => text.changeLanguage(language);
+export const changeLanguage = (language) => Stores.text.changeLanguage(language);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Nav, NavItem } from 'react-bootstrap';
-import { changeLanguage } from 'common/actions';
+import * as Action from 'common/actions';
 import { ProfileMenu } from './profileMenu';
 
 @inject('text')
@@ -14,7 +14,7 @@ export class NavMenu extends React.Component {
         let { lang } = this.state;
         lang = (lang !== 'en-US') ? 'en-US' : 'pt-BR';
         this.setState({ lang });
-        changeLanguage(lang);
+        Action.changeLanguage(lang);
     }
 
     render() {
