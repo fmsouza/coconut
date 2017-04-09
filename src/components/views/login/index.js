@@ -4,7 +4,7 @@ import { LoginForm } from 'components/forms';
 import * as Action from 'common/actions';
 import './login.css';
 
-@inject('text', 'user')
+@inject('text')
 @observer
 export class Login extends React.Component {
 
@@ -14,7 +14,7 @@ export class Login extends React.Component {
     }
 
     render() {
-        const { text, user } = this.props;
+        const { text } = this.props;
         return (
             <div className="login">
                 <h1 className="center">{text.get('login.title')}</h1>

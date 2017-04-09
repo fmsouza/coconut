@@ -2,7 +2,7 @@ import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { incrementCounter, resetCounter, changeLanguage } from 'common/actions';
+import { changeLanguage } from 'common/actions';
 
 @inject('text')
 @observer
@@ -24,8 +24,6 @@ export class NavMenu extends React.Component {
                 <NavItem onClick={() => this.toggleLanguage()}>
                     {text.get('header.navmenu.link.toggleLanguage')}
                 </NavItem>
-                <NavItem onClick={incrementCounter}>{text.get('header.navmenu.link.increment')}</NavItem>
-                <NavItem onClick={resetCounter}>{text.get('header.navmenu.link.reset')}</NavItem>
                 <LinkContainer to={{ pathname: '/login' }}>
                     <NavItem>{text.get('header.navmenu.link.login')}</NavItem>
                 </LinkContainer>

@@ -7,8 +7,6 @@ export default {
         },
         navmenu: {
             link: {
-                increment: 'Increment',
-                reset: 'Reset',
                 login: 'Login',
                 toggleLanguage: 'Change language'
             }
