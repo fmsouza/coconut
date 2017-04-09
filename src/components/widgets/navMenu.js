@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Nav, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { changeLanguage } from 'common/actions';
+import { ProfileMenu } from './profileMenu';
 
 @inject('text')
 @observer
@@ -24,9 +24,7 @@ export class NavMenu extends React.Component {
                 <NavItem onClick={() => this.toggleLanguage()}>
                     {text.get('header.navmenu.link.toggleLanguage')}
                 </NavItem>
-                <LinkContainer to={{ pathname: '/login' }}>
-                    <NavItem>{text.get('header.navmenu.link.login')}</NavItem>
-                </LinkContainer>
+                <ProfileMenu />
             </Nav>
         );
     }

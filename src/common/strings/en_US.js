@@ -36,5 +36,9 @@ export default {
             password: 'Password',
             submitButton: 'Submit'
         }
+    },
+
+    profilemenu: {
+        logoff: 'Logoff'
     }
 };

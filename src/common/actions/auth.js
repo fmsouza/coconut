@@ -14,3 +14,8 @@ export const login = (username, password) => {
         Action.go('/dashboard');
     } else Action.notify({ message: 'User not found.', level: Notifications.ERROR});
 };
+
+export const logoff = () => {
+    Stores.user.clean();
+    Action.go('/login');
+};

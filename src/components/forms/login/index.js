@@ -17,6 +17,10 @@ export class LoginForm extends React.Component {
         };
     }
 
+    componentWillUnmount() {
+        this.form.reset();
+    }
+
     renderInput(field) {
         return (
             <FormGroup controlId={field.name}>
@@ -49,7 +53,6 @@ export class LoginForm extends React.Component {
 
     render() {
         if (!this.form) this.form = formCreator(this.config);
-        // const form = formCreator(this.config);
         return (
             <form onSubmit={this.form.onSubmit}>
                 {this.renderInput(this.form.$('username'))}

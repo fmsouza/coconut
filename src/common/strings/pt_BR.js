@@ -36,5 +36,9 @@ export default {
             password: 'Senha',
             submitButton: 'Entrar'
         }
+    },
+
+    profilemenu: {
+        logoff: 'Sair'
     }
 };
