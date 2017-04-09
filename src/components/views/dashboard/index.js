@@ -10,7 +10,7 @@ export class Dashboard extends React.Component {
         const { text } = this.props;
         return (
             <div className="dashboard">
-                <h1 className="center">{text.get('dashboard.title')}</h1>
+                <h1 className="center">{text.get('views.dashboard.title')}</h1>
             </div>
         );
     }

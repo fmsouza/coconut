@@ -12,7 +12,7 @@ export class ProfileMenu extends React.Component {
         const { text } = this.props;
         return (
             <LinkContainer to={{ pathname: '/login' }}>
-                <NavItem>{text.get('header.navmenu.link.login')}</NavItem>
+                <NavItem>{text.get('actions.login')}</NavItem>
             </LinkContainer>
         );
     }
@@ -22,7 +22,7 @@ export class ProfileMenu extends React.Component {
         return (
             <NavDropdown eventKey={1} title={user.data.name} id="profilemenu-dropdown">
                 <MenuItem divider />
-                <MenuItem eventKey={1.1} onClick={Action.logoff}>{text.get('profilemenu.logoff')}</MenuItem>
+                <MenuItem eventKey={1.1} onClick={Action.logoff}>{text.get('actions.logoff')}</MenuItem>
             </NavDropdown>
         );
     }

@@ -1,44 +1,42 @@
-import React from 'react';
-
 export default {
-    header: {
-        brand: {
-            title: 'Coconut'
-        },
-        navmenu: {
-            link: {
-                login: 'Login',
-                toggleLanguage: 'Change language'
-            }
-        }
-    },
-    
-    dashboard: {
-        title: 'Dashboard'
+    actions: {
+        submit: 'Submit',
+        login: 'Login',
+        logoff: 'Logoff',
+        toggleLanguage: 'Change language'
     },
 
-    home: {
-        title: 'Welcome to React',
-        intro: count => (
-                <span>
-                    This is a boilerplate with React + MobX + Bootstrap<br/>
-                    and it presents the example code for a counter application<br/>
-                    just to show the architecture working.<br/><br/>
-                    Counter: {count}
-                </span>
-            )
-    },
-    
-    login: {
-        title: 'Login',
-        inputs: {
+    forms: {
+        login: {
             username: 'Username',
-            password: 'Password',
-            submitButton: 'Submit'
+            password: 'Password'
         }
     },
 
-    profilemenu: {
-        logoff: 'Logoff'
+    views: {
+        dashboard: {
+            title: 'Dashboard'
+        },
+        
+        login: {
+            title: 'Login'
+        },
+
+        forbidden: {
+            title: 'ERROR 400 - Access forbidden.'
+        },
+
+        notFound: {
+            title: 'ERROR 404 - URL not found.'
+        }
+    },
+
+    widgets: {
+        header: {
+            brand: {
+                title: 'Coconut'
+            }
+        },
     }
+    
 };

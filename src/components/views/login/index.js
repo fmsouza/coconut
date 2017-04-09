@@ -17,7 +17,7 @@ export class Login extends React.Component {
         const { text } = this.props;
         return (
             <div className="login">
-                <h1 className="center">{text.get('login.title')}</h1>
+                <h1 className="center">{text.get('views.login.title')}</h1>
                 <LoginForm onSuccess={(form) => this.onSuccess(form)} />
             </div>
         );

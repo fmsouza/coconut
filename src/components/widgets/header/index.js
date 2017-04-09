@@ -15,7 +15,7 @@ export class Header extends React.Component {
                 <Navbar>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <Link to="/">{text.get('header.brand.title')}</Link>
+                            <Link to="/">{text.get('widgets.header.brand.title')}</Link>
                         </Navbar.Brand>
                     </Navbar.Header>
                     <NavMenu pullRight />

@@ -1,44 +1,41 @@
-import React from 'react';
-
 export default {
-    header: {
-        brand: {
-            title: 'Coconut'
-        },
-        navmenu: {
-            link: {
-                login: 'Entrar',
-                toggleLanguage: 'Mudar idioma'
-            }
-        }
-    },
-    
-    dashboard: {
-        title: 'Painel'
+    actions: {
+        submit: 'Enviar',
+        login: 'Entrar',
+        logoff: 'Sair',
+        toggleLanguage: 'Mudar idioma'
     },
 
-    home: {
-        title: 'Seja bem-vindo ao React',
-        intro: count => (
-                <span>
-                    Essa aplicação é um boilerplate com React + MobX + Bootstrap<br/>
-                    e apresenta um código com o exemplo de uma aplicação de contador<br/>
-                    só para mostrar como a arquitetura funciona.<br/><br/>
-                    Contagem: {count}
-                </span>
-            )
-    },
-    
-    login: {
-        title: 'Entrar',
-        inputs: {
+    forms: {
+        login: {
             username: 'Usuário',
-            password: 'Senha',
-            submitButton: 'Entrar'
+            password: 'Senha'
         }
     },
 
-    profilemenu: {
-        logoff: 'Sair'
+    views: {
+        dashboard: {
+            title: 'Painel'
+        },
+        
+        login: {
+            title: 'Entrar'
+        },
+
+        forbidden: {
+            title: 'ERRO 400 - Acesso negado.'
+        },
+
+        notFound: {
+            title: 'ERRO 404 - URL não encontrada.'
+        }
+    },
+
+    widgets: {
+        header: {
+            brand: {
+                title: 'Coconut'
+            }
+        },
     }
 };

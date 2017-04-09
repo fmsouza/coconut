@@ -1,5 +1,13 @@
 import React from 'react';
+import { observer, inject } from 'mobx-react';
 
-export default () => (
-    <div>ERROR 404 - URL not found.</div>
-);
+@inject('text')
+@observer
+export default class NotFound extends React.Component {
+     render() {
+         const { text } = this.props;
+         return (
+             <div>{text.get('views.notFound.title')}</div>
+         );
+     }
+}

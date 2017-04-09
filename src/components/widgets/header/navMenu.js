@@ -22,7 +22,7 @@ export class NavMenu extends React.Component {
         return (
             <Nav pullRight={pullRight}>
                 <NavItem onClick={() => this.toggleLanguage()}>
-                    {text.get('header.navmenu.link.toggleLanguage')}
+                    {text.get('actions.toggleLanguage')}
                 </NavItem>
                 <ProfileMenu />
             </Nav>
