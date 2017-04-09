@@ -1,4 +1,5 @@
 import counterStore from './counterStore';
+import user from './user';
 import text from './text';
 
-export default { counterStore, text };
+export { counterStore, text, user };

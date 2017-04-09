@@ -1,4 +1,4 @@
-import Stores from 'common/stores';
+import * as Stores from 'common/stores';
 
 const { counterStore } = Stores;
 

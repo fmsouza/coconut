@@ -48,13 +48,14 @@ export class LoginForm extends React.Component {
     }
 
     render() {
-        const form = formCreator(this.config);
+        if (!this.form) this.form = formCreator(this.config);
+        // const form = formCreator(this.config);
         return (
-            <form onSubmit={form.onSubmit}>
-                {this.renderInput(form.$('username'))}
-                {this.renderInput(form.$('password'))}
-                {this.renderButton(form.$('sendButton'))}
-                {this.renderErrorBox(form.errors())}
+            <form onSubmit={this.form.onSubmit}>
+                {this.renderInput(this.form.$('username'))}
+                {this.renderInput(this.form.$('password'))}
+                {this.renderButton(this.form.$('sendButton'))}
+                {this.renderErrorBox(this.form.errors())}
             </form>
         );
     }
