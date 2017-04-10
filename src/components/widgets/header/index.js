@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Link } from 'react-router';
-import { Navbar } from 'react-bootstrap';
-import { NavMenu } from './navMenu';
+import { Nav, Navbar } from 'react-bootstrap';
+import { ProfileMenu } from './profileMenu';
 
 @inject('text')
 @observer
@@ -18,7 +18,9 @@ export class Header extends React.Component {
                             <Link to="/">{text.get('widgets.header.brand.title')}</Link>
                         </Navbar.Brand>
                     </Navbar.Header>
-                    <NavMenu pullRight />
+                    <Nav pullRight>
+                        <ProfileMenu />
+                    </Nav>
                 </Navbar>
             </nav>
         );
