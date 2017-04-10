@@ -26,6 +26,7 @@ const Application = () => (
         </Route>
 
         <Route path="login" component={Views.Login} onEnter={Action.allowedFor()} />
+        <Route path="settings" component={Views.Settings} onEnter={Action.allowedFor(Roles.ALL)} />
 
         <Route path="400" component={Views.Forbidden} />
         <Route path="*" component={Views.NotFound} />

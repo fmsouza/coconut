@@ -23,17 +23,21 @@ export default {
             title: 'Dashboard',
             overview: 'Overview'
         },
+
+        forbidden: {
+            title: 'ERROR 400 - Access forbidden.'
+        },
         
         login: {
             title: 'Login'
         },
 
-        forbidden: {
-            title: 'ERROR 400 - Access forbidden.'
-        },
-
         notFound: {
             title: 'ERROR 404 - URL not found.'
+        },
+
+        settings: {
+            title: 'Settings'
         }
     },
 

@@ -21,10 +21,12 @@ export class ProfileMenu extends React.Component {
         const { text, user } = this.props;
         return (
             <NavDropdown eventKey={1} title={user.data.name} id="profilemenu-dropdown">
-                <MenuItem eventKey={1.1}>
-                    <Glyphicon glyph="cog" />&nbsp;
-                    {text.get('widgets.profileMenu.settings')}
-                </MenuItem>
+                <LinkContainer to={{ pathname: '/settings' }}>
+                    <MenuItem eventKey={1.1}>
+                        <Glyphicon glyph="cog" />&nbsp;
+                        {text.get('widgets.profileMenu.settings')}
+                    </MenuItem>
+                </LinkContainer>
                 <MenuItem divider />
                 <MenuItem eventKey={1.2} onClick={Action.logoff}>
                     <Glyphicon glyph="log-out" />&nbsp;

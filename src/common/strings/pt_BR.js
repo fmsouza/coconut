@@ -23,17 +23,21 @@ export default {
             title: 'Painel',
             overview: 'Visão geral'
         },
+
+        forbidden: {
+            title: 'ERRO 400 - Acesso negado.'
+        },
         
         login: {
             title: 'Entrar'
         },
 
-        forbidden: {
-            title: 'ERRO 400 - Acesso negado.'
-        },
-
         notFound: {
             title: 'ERRO 404 - URL não encontrada.'
+        },
+
+        settings: {
+            title: 'Settings'
         }
     },
 
