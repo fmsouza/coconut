@@ -37,7 +37,12 @@ export default {
         },
 
         settings: {
-            title: 'Settings'
+            title: 'Configurações',
+            nav: {
+                general: 'Geral',
+                language: 'Idiomas',
+                about: 'Sobre'
+            }
         }
     },
 

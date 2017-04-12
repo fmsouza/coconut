@@ -26,7 +26,14 @@ const Application = () => (
         </Route>
 
         <Route path="login" component={Views.Login} onEnter={Action.allowedFor()} />
-        <Route path="settings" component={Views.Settings} onEnter={Action.allowedFor(Roles.ALL)} />
+
+        <Route path="settings" component={Views.Settings} onEnter={Action.allowedFor(Roles.ALL)}>
+          <IndexRedirect to="general" />
+          
+          <Route path="general" component={Views.GeneralSettings} />
+          <Route path="language" component={Views.LanguageSettings} />
+          <Route path="about" component={Views.AboutSettings} />
+        </Route>
 
         <Route path="400" component={Views.Forbidden} />
         <Route path="*" component={Views.NotFound} />
