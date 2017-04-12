@@ -2,7 +2,6 @@ import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import * as Action from 'common/actions';
 import './styles.css';
 
 @inject('text')

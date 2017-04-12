@@ -11,6 +11,9 @@ export default {
         login: {
             username: 'Usuário',
             password: 'Senha'
+        },
+        languageSettings: {
+            language: 'Idiomas'
         }
     },
 

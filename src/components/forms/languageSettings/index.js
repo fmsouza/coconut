@@ -1,16 +1,17 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import formCreator from 'common/form';
-import { Button, FormGroup, InputGroup, HelpBlock } from 'react-bootstrap';
+import { General } from 'common/constants';
+import { Button, ControlLabel, FormControl, FormGroup, HelpBlock } from 'react-bootstrap';
 import fields from './fields';
 
 @inject('text')
 @observer
-export class LoginForm extends React.Component {
+export class LanguageSettingsForm extends React.Component {
     get config() {
         const { onSuccess, onError, text } = this.props;
         return {
-            title: 'login',
+            title: 'languageSettings',
             fields: fields(text),
             onSuccess,
             onError
@@ -21,13 +22,14 @@ export class LoginForm extends React.Component {
         this.form.clear();
     }
 
-    renderInput(field) {
+    renderComboBox(field) {
         return (
-            <FormGroup controlId={field.name}>
-                <InputGroup>
-                    <InputGroup.Addon>{field.label}</InputGroup.Addon>
-                    <input className="form-control" {...field.bind()} />
-                </InputGroup>
+            <FormGroup>
+                <ControlLabel>{field.label}</ControlLabel>
+                <FormControl componentClass="select" placeholder={field.placeholder} {...field.bind()}>
+                    <option value="">select</option>
+                    {General.LANGUAGES.map(lang => <option key={lang} value={lang}>{lang}</option>)}
+                </FormControl>
             </FormGroup>
         );
     }
@@ -55,8 +57,7 @@ export class LoginForm extends React.Component {
         if (!this.form) this.form = formCreator(this.config);
         return (
             <form onSubmit={this.form.onSubmit}>
-                {this.renderInput(this.form.$('username'))}
-                {this.renderInput(this.form.$('password'))}
+                {this.renderComboBox(this.form.$('language'))}
                 {this.renderButton(this.form.$('sendButton'))}
                 {this.renderErrorBox(this.form.errors())}
             </form>

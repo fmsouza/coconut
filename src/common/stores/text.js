@@ -5,7 +5,7 @@ export class TextStore {
 
     @observable strings = {};
 
-    @observable language = navigator.language;
+    @observable language = '';
 
     constructor() {
         this.strings = intl(this.language);
