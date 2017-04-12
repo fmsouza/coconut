@@ -16,8 +16,8 @@ export class Overview extends React.Component {
     renderRepositories() {
         if (!this.props.repositories.all) return null;
         return this.props.repositories.all.map((repository, i) => (
-            <Link to={{ pathname: `/dashboard/repository/${repository.id}` }}>
-                <Repository key={i} {...repository} />
+            <Link key={i} to={{ pathname: `/dashboard/repository/${repository.id}` }}>
+                <Repository {...repository} />
             </Link>
         ));
     }
